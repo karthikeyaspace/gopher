@@ -32,7 +32,7 @@ func userHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, string(data))
 }
 
-func main() {
+func httpServer() {
 	http.HandleFunc("/", helloHandler)
 	http.HandleFunc("/user", userHandler)
 	http.ListenAndServe(":8080", nil)

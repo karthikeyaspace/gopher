@@ -12,7 +12,7 @@ type Person struct {
 	age int
 }
 
-func main() {
+func first() {
 	//go from chatgpt
 
 
@@ -114,7 +114,7 @@ func printNums() {
 
 }
 
-func divide(a, b int) (int, error) {
+func dividefirst(a, b int) (int, error) {
 	if b==0 {
 		return 0, errors.New("Cannont divide with zero")
 	}

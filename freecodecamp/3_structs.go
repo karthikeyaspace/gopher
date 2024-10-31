@@ -1,62 +1,58 @@
 package main
 
 type car struct {
-	make string
+	make  string
 	model string
-	year int
+	year  int
 	price float64
 }
+
 // car1 := car{"Toyota", "Corolla", 2020, 15000.00}
-// car2 := car{"Ford", "F150", 2020, 25000.00} 
+// car2 := car{"Ford", "F150", 2020, 25000.00}
 
-
-
-// struct key can hold any type 
+// struct key can hold any type
 
 // we can also nest structs
 type person struct {
 	name string
-	age int
-	car car
+	age  int
+	car  car
 }
+
 // person1 := person{"John", 25, car1}
 
 // think of structs in go as typescript in steroids
 
 type messageToSend struct {
 	message string
-	to user
-	from user
+	to      user
+	from    user
 }
 
 type user struct {
-	name string
-	mail string
-	alias string
+	name   string
+	mail   string
+	alias  string
 	number int
 }
-
-
-
 
 // nesting structs - anonymouse structs
 
 type messageToSend2 struct {
 	message string
-	to struct {
-		name string
-		mail string
-		alias string
+	to      struct {
+		name   string
+		mail   string
+		alias  string
 		number int
 	}
 	from struct {
-		name string
-		mail string
-		alias string
+		name   string
+		mail   string
+		alias  string
 		number int
 	}
 }
- 
 
 // go is not an object oriented language but it has some object oriented features
 
@@ -79,5 +75,3 @@ type truck struct {
 // }
 
 // truck1.make // Toyota
-
- 

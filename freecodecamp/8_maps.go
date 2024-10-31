@@ -12,7 +12,6 @@ type vehcile struct {
 	price int
 }
 
-
 func maps() {
 	// map[keyType]valueType
 	// map[keyType]valueType{key: value, key: value}
@@ -26,15 +25,14 @@ func maps() {
 
 	printAllUsers(customers)
 
-
 	// check if key exists
 	if value, ok := customers["c_01"]; ok {
 		fmt.Println("Customer ID: c_01 exists with name: ", value)
-	} 
+	}
 
-	// make function 
+	// make function
 
-	products := make(map[string]int) 
+	products := make(map[string]int)
 
 	products["p_01"] = 100
 	products["p_02"] = 200
@@ -48,16 +46,15 @@ func maps() {
 	// update key
 	products["p_02"] = 250
 
-
 	// using structs to make nested maps
 
 	vehicles := map[string]vehcile{
-		"v_01": {vtype: "car", 
-						price: 10000},
-		"v_02": {vtype: "bike", 
-						price: 2000},
-		"v_03": {vtype: "cycle", 
-						price: 500},
+		"v_01": {vtype: "car",
+			price: 10000},
+		"v_02": {vtype: "bike",
+			price: 2000},
+		"v_03": {vtype: "cycle",
+			price: 500},
 	}
 
 	for key, value := range vehicles {
@@ -70,13 +67,10 @@ func maps() {
 		fmt.Println("Vehicle ID: v_01 exists with type: ", value.vtype, "price: ", value.price)
 	}
 
-
-
-
 }
 
 func printAllUsers(customers map[string]string) {
 	for key, value := range customers {
 		fmt.Println("Customer ID: ", key, "Customer name: ", value)
 	}
-} 
+}

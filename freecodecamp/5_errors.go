@@ -6,9 +6,9 @@ import (
 )
 
 type User struct {
-	ID int
+	ID        int
 	FirstName string
-	LastName string
+	LastName  string
 }
 
 func getUser() (*User, error) {
@@ -28,7 +28,7 @@ func userController() {
 		fmt.Println("Error:", err)
 		return
 	}
-	
+
 	profile, err := getUserProfile(user.ID)
 	if err != nil {
 		fmt.Println("Error:", err)
@@ -39,8 +39,7 @@ func userController() {
 	fmt.Println("Profile:", profile)
 }
 
-
 // go has a built-in error interface type
 
-// create a new error 
+// create a new error
 // var err error = errors.New("error message")

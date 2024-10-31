@@ -15,8 +15,8 @@ import (
 
 // create a custom logger
 
-func getLogger(formatter func(string ,string) string) func (string, string) {
-	return func (msg string, level string) {
+func getLogger(formatter func(string, string) string) func(string, string) {
+	return func(msg string, level string) {
 		fmt.Println(formatter(msg, level))
 	}
 }
@@ -42,8 +42,6 @@ func advfunctions() {
 		return fmt.Sprintf("[%s] %s", level, msg)
 	})
 
-
-
 	// log database errors
 
 	for _, err := range dbErrors {
@@ -56,13 +54,8 @@ func advfunctions() {
 		consoleLogger(err.Error(), "ERROR")
 	}
 
-
-
 	//Defer Keyword
 	// The defer keyword is used to delay the execution of a function until the surrounding function returns.
 	// Defer is commonly used to ensure that resources are released after a function has completed.
-
-
-
 
 }

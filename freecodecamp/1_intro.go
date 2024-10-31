@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// https://www.youtube.com/watch?v=un6ZyFkqFKo
+
 /*
 	- Go has very fast compile time and execution time
 	- Go is slower in execution than C and Rust
@@ -10,7 +12,6 @@ import "fmt"
 	- execution is similar to Java, C#
 	- Go uses much less memory than Java and C#
 */
-
 
 /*
 	Data types in GO
@@ -22,18 +23,26 @@ import "fmt"
 	- float32, float64
 	- complex64, complex128
 
-	- int, uint, float64 are enough for most cases 
+	- int, uint, float64 are enough for most cases
 
 
 	- Go does not allow unused variables
 */
 
+/*
+	Important go commands
+	- go run <filename>.go
+	- go build <filename>.go
+	- go fmt <filename>.go
+	- go install <filename>.go
+	- go get <package-name>
+*/
 
 func main() {
 	fmt.Println("Hello, World!")
 
 	// Declaring variables
-	 
+
 	var age int = 40
 	var name string = "John Doe"
 
@@ -41,10 +50,8 @@ func main() {
 	age1 := 40
 	name1 := "John Doe"
 
-
 	fmt.Println(name, "is", age, "years old")
 	fmt.Println(name1, "is", age1, "years old")
-
 
 	i := 42
 	f := 3.14
@@ -56,15 +63,12 @@ func main() {
 	name2, age2 := "Jane Doe", 30
 	fmt.Println(name2, "is", age2, "years old")
 
-
-
 	// Printf - formatted output
 	// %v - value in default format
 	// %T - type of the value
 	// %d - decimal
 	// %f - float
 	// %s - string
-
 
 	// Conditional statements
 
@@ -82,7 +86,7 @@ func main() {
 
 	case 30:
 		fmt.Println("You are 30 years old")
-	
+
 	default:
 		fmt.Println("You are neither 20 nor 30 years old")
 	}
@@ -124,6 +128,3 @@ func main() {
 
 	fmt.Println(arr)
 }
-
-
-

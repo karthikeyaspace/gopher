@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 // in go, arrays have a fixed size, slices are a dynamic array
 // slices are like references to arrays
 // a slice does not store any data, it just describes a section of an underlying array
@@ -16,13 +15,11 @@ func demo() {
 	fmt.Println(a)
 	fmt.Println(b)
 
-
 	// slice - dynamic array
 	c := []int{1, 2, 3, 4, 5}
-	var d []int = b[1:4] 
+	var d []int = b[1:4]
 	fmt.Println(c)
 	fmt.Println(d)
-
 
 	// slice length and capacity
 	fmt.Println(len(d))
@@ -40,10 +37,9 @@ func demo() {
 	f := make([]int, len(e))
 	copy(f, e)
 	fmt.Println(f)
-	
-	
+
 	// multi-dimensional slices
 	g := [][]int{{1, 2, 3}, {4, 5, 6}}
-	fmt.Println(g)	
+	fmt.Println(g)
 
 }

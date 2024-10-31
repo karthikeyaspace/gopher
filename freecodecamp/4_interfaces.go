@@ -8,7 +8,6 @@ import (
 // Interfaces
 // An interface is a collection of method signatures that a type can implement.
 
-
 type shape interface {
 	area() float64
 	perimeter() float64
@@ -33,7 +32,6 @@ func (c circle) perimeter() float64 {
 // in go, we don't need to explicitly say that a type implements an interface
 // as long as the type has the methods defined in the interface, it is said to implement the interface
 
-
 // Eg
 type employee interface {
 	getName() string
@@ -41,7 +39,7 @@ type employee interface {
 }
 
 type contractor struct {
-	name string
+	name       string
 	hourlyRate float64
 	totalHours float64
 }
@@ -58,9 +56,6 @@ func (c contractor) getSalary() float64 {
 // fmt.Println(emp.getName())
 // fmt.Println(emp.getSalary())
 
-
-
-
 // Multiple interfaces
 
 type expense interface {
@@ -73,7 +68,7 @@ type sender interface {
 
 type email struct {
 	isSub bool
-	body string
+	body  string
 }
 
 func (e email) cost() float64 {
@@ -87,15 +82,11 @@ func (e email) send() {
 	// fmt.Println("Sending email, body: ", e.body)
 }
 
-
-
 // naming the arguments in method in interface - for readability
 
 type Copier interface {
 	Copy(srcFl string, destFl string) (bytesWritten int, err error)
 }
-
-
 
 type File interface {
 	io.Closer

@@ -6,7 +6,6 @@ import (
 
 // Loops in go
 
-
 func loop() {
 	// for loop
 	for i := 0; i < 5; i++ {
@@ -42,18 +41,16 @@ func loop() {
 		fmt.Println(key, value)
 	}
 
-
 	// loop through string
 	str := "hello"
 	for index, value := range str {
 		fmt.Println(index, string(value))
-	}	
+	}
 
+	// break
 
-	// break 
-
-	for i:= 0; i<10; i++ {
-		if i==5 {
+	for i := 0; i < 10; i++ {
+		if i == 5 {
 			break
 		}
 		fmt.Println(i)
@@ -61,20 +58,18 @@ func loop() {
 
 	// continue
 
-	for i:= 0; i<10; i++ {
-		if i==5 {
+	for i := 0; i < 10; i++ {
+		if i == 5 {
 			continue
 		}
 		fmt.Println(i)
 	}
 
 	// nested loop
-	for i:= 0; i<5; i++ {
-		for j:= 0; j<5; j++ {
+	for i := 0; i < 5; i++ {
+		for j := 0; j < 5; j++ {
 			fmt.Println(i, j)
 		}
 	}
 
 }
-
-
